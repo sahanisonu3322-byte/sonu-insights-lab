@@ -50,6 +50,7 @@ export default {
         'section-bg': 'hsl(var(--section-bg))',
         'skill-card': 'hsl(var(--skill-card))',
         'project-card': 'hsl(var(--project-card))',
+        'accent-glow': 'hsl(var(--accent-glow))',
       },
       borderRadius: {
         lg: "var(--radius)",

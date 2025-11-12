@@ -8,76 +8,78 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 215 25% 15%;
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 60%;
+    --primary: 14 100% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 100% 97%;
-    --secondary-foreground: 217 91% 60%;
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 217 91% 60%;
+    --accent: 14 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 60%;
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 14 100% 65%;
 
     --radius: 0.75rem;
 
     /* Custom tokens for portfolio */
-    --hero-gradient-start: 217 91% 60%;
-    --hero-gradient-end: 200 100% 50%;
-    --section-bg: 210 40% 98%;
-    --skill-card: 0 0% 100%;
-    --project-card: 0 0% 100%;
+    --hero-gradient-start: 14 100% 65%;
+    --hero-gradient-end: 24 100% 70%;
+    --section-bg: 220 18% 14%;
+    --skill-card: 220 15% 16%;
+    --project-card: 220 15% 16%;
+    --accent-glow: 14 100% 65%;
   }
 
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 217 33% 17%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 217 33% 17%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 217 91% 60%;
+    --primary: 14 100% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 217 91% 60%;
+    --accent: 14 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 60%;
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 14 100% 65%;
 
-    --section-bg: 222 47% 11%;
-    --skill-card: 217 33% 17%;
-    --project-card: 217 33% 17%;
+    --section-bg: 220 18% 14%;
+    --skill-card: 220 15% 16%;
+    --project-card: 220 15% 16%;
+    --accent-glow: 14 100% 65%;
   }
 }
 
@@ -102,6 +104,11 @@ All colors MUST be HSL.
 
 @layer utilities {
   .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--section-bg)));
+    position: relative;
+  }
+
+  .accent-shape {
     background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
   }
 
@@ -115,6 +122,10 @@ All colors MUST be HSL.
 
   .animate-slide-up {
     animation: slide-up 0.6s ease-out;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 40px hsl(var(--accent-glow) / 0.3);
   }
 }
 
